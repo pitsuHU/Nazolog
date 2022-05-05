@@ -142,7 +142,29 @@ var CheckPoints = [
         "img":"img/13_enyu.png",
         "sound":"sound/Check1.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    //ここからテスト用
+    {
+        "name": "ModelBurn",
+        "lat":43.076864,
+        "lng":141.290745,
+        "pointer":"img/marker_p.png",
+        "img":"img/12_modelburn.png",
+        "sound":"sound/Check1.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
     }
+
+    {
+        "name": "Enyu",
+        "lat":43.076449,
+        "lng":141.291369,
+        "pointer":"img/marker_p.png",
+        "img":"img/13_enyu.png",
+        "sound":"sound/Check1.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
+    }
+
 ];                                  // ★人魚の情報を入れる変数
 
 
