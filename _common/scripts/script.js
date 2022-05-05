@@ -153,7 +153,7 @@ var CheckPoints = [
         "img":"img/12_modelburn.png",
         "sound":"sound/Check1.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
-    }
+    },
 
     {
         "name": "Enyu",
