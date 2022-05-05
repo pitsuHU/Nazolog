@@ -140,7 +140,7 @@ var CheckPoints = [
         "lng":141.341672,
         "pointer":"img/marker_p.png",
         "img":"img/13_enyu.png",
-        "sound":"sound/Check3.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
 
