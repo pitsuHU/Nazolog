@@ -23,7 +23,7 @@ var CheckPoints = [
         "lng":141.344680,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check1.mp3",
         "voice":"_common/sounds/1_elm_forest.mp3"
     },
     {
@@ -32,7 +32,7 @@ var CheckPoints = [
         "lng":141.347466,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/1_elm_forest.mp3"
     },
     {
@@ -41,7 +41,7 @@ var CheckPoints = [
         "lng":141.347070,
         "pointer":"img/marker_p.png",
         "img":"img/2_elmclark.png",
-        "sound":"sound/Check2.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/2_elm.mp3"
     },
     {
@@ -50,7 +50,7 @@ var CheckPoints = [
         "lng":141.345256,
         "pointer":"img/marker_p.png",
         "img":"img/3_urai.png",
-        "sound":"sound/Check3.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/3_urai.mp3"
     },
     {
@@ -59,7 +59,7 @@ var CheckPoints = [
         "lng":141.343563,
         "pointer":"img/marker_p.png",
         "img":"img/4_furukawa.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/4_hurukawa.mp3"
     },
     {
@@ -68,7 +68,7 @@ var CheckPoints = [
         "lng":141.343381,
         "pointer":"img/marker_p.png",
         "img":"img/5_clark.png",
-        "sound":"sound/Check2.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/5_clark.mp3"
     },
     {
@@ -77,7 +77,7 @@ var CheckPoints = [
         "lng":141.342474,
         "pointer":"img/marker_p.png",
         "img":"img/6_buildings.png",
-        "sound":"sound/Check3.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/6_oldbuilding.mp3"
     },
     {
@@ -86,7 +86,7 @@ var CheckPoints = [
         "lng":141.342391,
         "pointer":"img/marker_p.png",
         "img":"img/7_musium.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/7_musiam.mp3"
     },
     {
@@ -95,7 +95,7 @@ var CheckPoints = [
         "lng":141.341918,
         "pointer":"img/marker_p.png",
         "img":"img/8_pond.png",
-        "sound":"sound/Check2.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/8_musiam.mp3"
     },
     {
@@ -104,7 +104,7 @@ var CheckPoints = [
         "lng":141.341126,
         "pointer":"img/marker_p.png",
         "img":"img/9_sksktnliv.png",
-        "sound":"sound/Check3.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/9_sksktnLi.mp3"
     },
     {
@@ -113,7 +113,7 @@ var CheckPoints = [
         "lng":141.336632,
         "pointer":"img/marker_p.png",
         "img":"img/10_popra.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/10_popla.mp3"
     },
     {
@@ -122,7 +122,7 @@ var CheckPoints = [
         "lng":141.332275,
         "pointer":"img/marker_p.png",
         "img":"img/11_ruin.png",
-        "sound":"sound/Check2.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/11_ruin.mp3"
     },
     {
@@ -131,7 +131,7 @@ var CheckPoints = [
         "lng":141.339938,
         "pointer":"img/marker_p.png",
         "img":"img/12_modelburn.png",
-        "sound":"sound/Check3.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/12_modelbarn.mp3"
     },
     {
@@ -140,7 +140,7 @@ var CheckPoints = [
         "lng":141.341672,
         "pointer":"img/marker_p.png",
         "img":"img/13_enyu.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"sound/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
 
@@ -151,8 +151,8 @@ var CheckPoints = [
         "lng":141.290745,
         "pointer":"img/marker_p.png",
         "img":"img/12_modelburn.png",
-        "sound":"sound/Check1.mp3",
-        "voice":"_common/sounds/13_enyu.mp3"
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/12_modelbarn.mp3"
     },
 
     {
@@ -161,7 +161,7 @@ var CheckPoints = [
         "lng":141.291369,
         "pointer":"img/marker_p.png",
         "img":"img/13_enyu.png",
-        "sound":"sound/Check1.mp3",
+        "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     }
 
