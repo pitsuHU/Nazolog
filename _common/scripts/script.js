@@ -144,11 +144,11 @@ var CheckPoints = [
         "voice":"_common/sounds/13_enyu.mp3"
     },
 
-    //ここからテスト用
+    //ここから大通公園用
     {
-        "name": "ModelBurn",
-        "lat":43.076864,
-        "lng":141.290745,
+        "name": "waterfountain",
+        "lat":43.060419,
+        "lng":141.351356,
         "pointer":"img/marker_p.png",
         "img":"img/12_modelburn.png",
         "sound":"_common/sounds/Check3.mp3",
@@ -156,9 +156,39 @@ var CheckPoints = [
     },
 
     {
-        "name": "Enyu",
-        "lat":43.076449,
-        "lng":141.291369,
+        "name": "syoon",
+        "lat":43.060209,
+        "lng":141.349810,
+        "pointer":"img/marker_p.png",
+        "img":"img/13_enyu.png",
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    {
+        "name": "blackslide",
+        "lat":43.059443,
+        "lng":141.344441,
+        "pointer":"img/marker_p.png",
+        "img":"img/13_enyu.png",
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    {
+        "name": "court",
+        "lat":43.058556,
+        "lng":141.337669,
+        "pointer":"img/marker_p.png",
+        "img":"img/13_enyu.png",
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    {
+        "name": "garden",
+        "lat":43.058692,
+        "lng":141.338814,
         "pointer":"img/marker_p.png",
         "img":"img/13_enyu.png",
         "sound":"_common/sounds/Check3.mp3",
