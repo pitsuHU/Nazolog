@@ -201,7 +201,7 @@ var CheckPoints = [
 
 
 //var captured = [];                                  // ★人魚を捕獲済みか否かを入れる変数
-var getImg = document.getElementById("getImg");     // ★img要素の取得
+
 // loadCheckPoints();                                     // ★人魚の情報を読み込む
 
 //初期位置を指定
@@ -232,6 +232,7 @@ navigator.geolocation.watchPosition((position) =>{
     const lng = position.coords.longitude;
     const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
     const zoom = map.getZoom();
+    displayData(lat, lng, accu);
 
     //マップの表示位置を変更
     map.setView([lat, lng], zoom, {animation: true});
