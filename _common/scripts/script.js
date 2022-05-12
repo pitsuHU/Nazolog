@@ -230,9 +230,9 @@ navigator.geolocation.watchPosition((position) =>{
     //緯度経度の情報を得る
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
-    const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
+    //const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
     const zoom = map.getZoom();
-    displayData(lat, lng, accu);
+
 
     //マップの表示位置を変更
     map.setView([lat, lng], zoom, {animation: true});
@@ -269,13 +269,6 @@ function showMyPos(lat, lng) {
 
 */
 
-// データを表示する displayData 関数
-function displayData(lat, lng, accu) {
-    var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
-    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"  // データ表示
-                    + "精度: "       + accu;
-
-}
 
 
 // 地図の初期化
@@ -366,8 +359,12 @@ function calcDistance(lat, lng) {
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
+        var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
+                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" ;// データ表示
+
+
         // 捕獲の判定と捕獲した時のエフェクト
-        if(distance[i] < 20 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distance[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             music.play();                                       // 音を流す            
             captured[i] = true;                                 // 捕獲済にする
