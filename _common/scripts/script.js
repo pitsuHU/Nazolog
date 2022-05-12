@@ -350,7 +350,7 @@ function placeCheckPoints() {
  
 // ★自分と人魚との距離を計算する calcDistance 関数
 function calcDistance(lat, lng) {
-    var distance = [];                              // 距離を入れる配列
+    var distances = [];                              // 距離を入れる配列
 
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
