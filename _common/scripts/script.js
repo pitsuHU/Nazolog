@@ -218,6 +218,9 @@ L.tileLayer(
     ).addTo(map)
 
 
+//チェックポイントを配置
+placeCheckPoints();
+
 //自分のマーカの作成
 const marker = L.marker(defPos).addTo(map)
 
