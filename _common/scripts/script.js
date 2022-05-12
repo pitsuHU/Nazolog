@@ -271,47 +271,6 @@ function showMyPos(lat, lng) {
 
 
 
-// 地図の初期化
-function initMap() {
-
-    //スタートボタンを隠す
-    var start = document.getElementById("StartButtonDiv");
-    start.hidden = true;
-
-    //ガイド紹介欄を隠す
-    var guide = document.getElementById("GuideIntroductionDiv");
-    guide.hidden = true;
-
-    //マップを表示
-    var mainDiv = document.getElementById("mainDiv");
-    mainDiv.hidden = false;
-
-    //音声一覧を表示
-    var portfolioDiv = document.getElementById("portfolio");
-    portfolioDiv.hidden = false;
-
-    /*
-    // 1回だけ現在位置を測定する getCurrentPosition メソッド
-    navigator.geolocation.getCurrentPosition( (position) => {
-        var lat = position.coords.latitude;         // 緯度を取得
-        var lng = position.coords.longitude;        // 経度を取得
-        var initPos = new google.maps.LatLng(lat, lng); // 初期位置を指定
-        gmap = new google.maps.Map(mapDiv, {        // Map オブジェクトを作成して mapDiv に表示
-            center: initPos,                        // 地図の中心を initPos に設定
-            zoom: 16                                // ズーム倍率
-        });
-        mark = new google.maps.Marker({             // Marker オブジェクトを作成
-            map: gmap,                              // gmap の上に表示する
-            position: initPos,                      // initPos の位置に
-        });
-        placeCheckPoints();                            // ★人魚を配置する
-    }, (error) => {                                 // エラー処理（今回は特に何もしない）
-    }, {
-        enableHighAccuracy: true                    // 高精度で測定するオプション
-    });
-    */
-}
-
 
 // // ★人魚の情報を読み込む loadMermaids 関数
 // function loadCheckPoints() {
