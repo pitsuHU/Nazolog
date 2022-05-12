@@ -205,6 +205,18 @@ var CheckPoints = [
 var getImg = document.getElementById("getImg");     // ★img要素の取得
 // loadCheckPoints();                                     // ★人魚の情報を読み込む
 
+//初期位置を指定
+const defPos = [35.6585840, 139.7454316]
+//著作権表示の指定
+const copyright = "&copy; <a fref='" + "https://www.openstreetmap.org/copyright" + "'>OpenStreetMap</a> contributors"
+//基本マップの設定
+const map = L.map('map_div').setView(defPos, 17)
+//タイルレイヤーの指定
+L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {attribution: copyright}
+    ).addTo(map)
+
 
 //自分のマーカの作成
 const marker = L.marker(defPos).addTo(map)
