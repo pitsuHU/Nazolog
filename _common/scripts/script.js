@@ -18,7 +18,6 @@ let play = document.getElementById("play");
 let pause = document.getElementById("pause");
 // ここまでsound関係
 
-
 var CheckPoints = [
     {
         "name": "1_ElmnoMori",
@@ -269,6 +268,13 @@ function showMyPos(lat, lng) {
 
 */
 
+// データを表示する displayData 関数
+function displayData(lat, lng, accu) {
+    var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
+    txt.innerHTML = "緯度, 経度: " + lat + ", " + lng + "<br>"  // データ表示
+                    + "精度: "       + accu;
+
+}
 
 
 // 地図の初期化
