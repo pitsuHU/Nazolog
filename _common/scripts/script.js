@@ -204,6 +204,25 @@ var CheckPoints = [
 
 // loadCheckPoints();                                     // ★人魚の情報を読み込む
 
+//初期位置を指定
+const defPos = [35.6585840, 139.7454316]
+//著作権表示の指定
+const copyright = "&copy; <a fref='" + "https://www.openstreetmap.org/copyright" + "'>OpenStreetMap</a> contributors"
+//基本マップの設定
+const map = L.map('map_div').setView(defPos, 17)
+//タイルレイヤーの指定
+L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {attribution: copyright}
+    ).addTo(map)
+
+
+//チェックポイントを配置
+placeCheckPoints();
+
+//自分のマーカの作成
+const marker = L.marker(defPos).addTo(map)
+
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
 
 navigator.geolocation.watchPosition((position) =>{
@@ -345,7 +364,7 @@ function calcDistance(lat, lng) {
 
 
         // 捕獲の判定と捕獲した時のエフェクト
-        if(distance[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distance[i] < 20 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             music.play();                                       // 音を流す            
             captured[i] = true;                                 // 捕獲済にする
