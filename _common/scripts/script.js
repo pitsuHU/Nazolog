@@ -1,6 +1,9 @@
+
+/*
 var mapDiv = document.getElementById("mapDiv");     // 地図を置く場所
 var gmap;                                           // Googleマップの Map オブジェクトのための変数
 var mark;                                           // Googleマップの Marker オブジェクトのための変数
+*/
 
 // sound関係
 const track = document.getElementById("track");
@@ -198,11 +201,43 @@ var CheckPoints = [
 ];                                  // ★人魚の情報を入れる変数
 
 
-var captured = [];                                  // ★人魚を捕獲済みか否かを入れる変数
+//var captured = [];                                  // ★人魚を捕獲済みか否かを入れる変数
 var getImg = document.getElementById("getImg");     // ★img要素の取得
 // loadCheckPoints();                                     // ★人魚の情報を読み込む
 
+
+//自分のマーカの作成
+const marker = L.marker(defPos).addTo(map)
+
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
+
+navigator.geolocation.watchPosition((position) =>{
+
+    //緯度経度の情報を得る
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
+    const zoom = map.getZoom();
+    displayData(lat, lng, accu);
+
+    //マップの表示位置を変更
+    map.setView([lat, lng], zoom, {animation: true});
+    //マーカの位置も変更
+    marker.setLatLng([lat, lng]);
+    marker.bindPopup('現在位置はココ');
+
+    calcDistance(lat, lng)  //各チェックポイントとの距離を測る
+
+},(error)=>{
+
+},{
+    enableHighAccuracy: true
+}
+);
+
+
+
+/*
 navigator.geolocation.watchPosition( (position) => {
     var lat  = position.coords.latitude;            // 緯度を取得
     var lng  = position.coords.longitude;           // 経度を取得
@@ -217,6 +252,10 @@ function showMyPos(lat, lng) {
     gmap.setCenter(myPos);                          // gmap の中心を myPos の位置にする
     mark.setPosition(myPos);                        // mark の位置を myPos にする
 }
+
+*/
+
+
 
 // 地図の初期化
 function initMap() {
@@ -237,6 +276,7 @@ function initMap() {
     var portfolioDiv = document.getElementById("portfolio");
     portfolioDiv.hidden = false;
 
+    /*
     // 1回だけ現在位置を測定する getCurrentPosition メソッド
     navigator.geolocation.getCurrentPosition( (position) => {
         var lat = position.coords.latitude;         // 緯度を取得
@@ -255,6 +295,7 @@ function initMap() {
     }, {
         enableHighAccuracy: true                    // 高精度で測定するオプション
     });
+    */
 }
 
 
@@ -273,13 +314,18 @@ function initMap() {
 
 // ★人魚を地図上に配置する placeCheckPoints 関数
 function placeCheckPoints() {
-    var mermaidMark = [];                           // 人魚マーカーの配列
+    //var mermaidMark = [];  
+                             // 人魚マーカーの配列
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
+    /*
         var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng); // 人魚の位置を設定
         var img = {                                 // 画像の設定
             url: CheckPoints[i].pointer,                   // 画像ファイル名
             scaledSize: new google.maps.Size(60, 60)    // 画像を縮小表示
         };
+        */
+        L.marker([CheckPoints[i].lat, CheckPoints[i].lng]).addTo(map); //マーカーを配置
+        /*
         mermaidMark[i] = new google.maps.Marker({   // 人魚のマーカーを作成
             map: gmap,                              // gmap の上に表示する
             position: pos,                          // pos の位置に
@@ -287,16 +333,18 @@ function placeCheckPoints() {
             title: CheckPoints[i].name                 // タイトルを設定
         });
         captured[i] = false;                        // 捕獲済み状態を全てfalseにする
+        */
     }
 }
  
 // ★自分と人魚との距離を計算する calcDistance 関数
 function calcDistance(lat, lng) {
     var distance = [];                              // 距離を入れる配列
-    var myPos = new google.maps.LatLng(lat, lng);   // Googleマップの LatLng オブジェクトを作成
+
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
-        var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
-        distance[i] = google.maps.geometry.spherical.computeDistanceBetween(myPos, pos);    // 距離を求める
+        //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
+        distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
+
         // 捕獲の判定と捕獲した時のエフェクト
         if(distance[i] < 20 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
@@ -314,6 +362,16 @@ function calcDistance(lat, lng) {
             });
         }
     }
+}
+
+
+// 距離を測る
+function distance(lat1, lng1, lat2, lng2) {
+    lat1 *= Math.PI / 180;
+    lng1 *= Math.PI / 180;
+    lat2 *= Math.PI / 180;
+    lng2 *= Math.PI / 180;
+    return 6371 * Math.acos(Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) + Math.sin(lat1) * Math.sin(lat2));
 }
 
 function ReLoad(){
