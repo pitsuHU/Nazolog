@@ -317,7 +317,7 @@ function placeCheckPoints() {
 // ★自分と人魚との距離を計算する calcDistance 関数
 function calcDistance(lat, lng) {
     var distances = [];                 // 距離を入れる配列
-    var searces = Boolean("false");
+    var searces = new Boolean("false");
 
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
@@ -329,7 +329,7 @@ function calcDistance(lat, lng) {
 
 
         // 捕獲の判定と捕獲した時のエフェクト
-        if(distance[i] < 0.150) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distance[i] < 0.150 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             //searces = "true"
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             music.play();                                       // 音を流す            
