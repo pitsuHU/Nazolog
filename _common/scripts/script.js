@@ -312,18 +312,21 @@ function placeCheckPoints() {
  
 // ★自分と人魚との距離を計算する calcDistance 関数
 function calcDistance(lat, lng) {
-    var distances = [];                              // 距離を入れる配列
+    var distances = [];                 // 距離を入れる配列
+    var searces = Boolean("false");
 
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
-                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" ;// データ表示
+                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
+                                    + "P1検知:" + searces;// データ表示
 
 
         // 捕獲の判定と捕獲した時のエフェクト
         if(distance[i] < 0.800) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+            searces = "true"
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             music.play();                                       // 音を流す            
             captured[i] = true;                                 // 捕獲済にする
