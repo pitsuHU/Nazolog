@@ -18,6 +18,8 @@ let play = document.getElementById("play");
 let pause = document.getElementById("pause");
 // ここまでsound関係
 
+var captured = [];
+
 var CheckPoints = [
     {
         "name": "1_ElmnoMori",
@@ -305,8 +307,10 @@ function placeCheckPoints() {
             icon: img,                              // アイコンを設定
             title: CheckPoints[i].name                 // タイトルを設定
         });
-        captured[i] = false;                        // 捕獲済み状態を全てfalseにする
+
         */
+        captured[i] = false;                        // 捕獲済み状態を全てfalseにする
+        
     }
 }
  
@@ -325,7 +329,7 @@ function calcDistance(lat, lng) {
 
 
         // 捕獲の判定と捕獲した時のエフェクト
-        if(distance[i] < 0.800) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distance[i] < 0.150) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             searces = "true"
             var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             music.play();                                       // 音を流す            
