@@ -318,12 +318,13 @@ function placeCheckPoints() {
 function calcDistance(lat, lng) {
     var distances = [];                 // 距離を入れる配列
     var searces = false;
+    var test
 
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
-        distances[1] += 2; 
+        distances[1] = distances[0] + 2; 
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
                     txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
                                     + "P1検知:" + searces;// データ表示
