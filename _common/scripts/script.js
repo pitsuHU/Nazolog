@@ -326,7 +326,7 @@ function calcDistance(lat, lng) {
 
         distances[1] = distances[0] + 2; 
 
-        if(distance[0] < 6.0000000000000000){
+        if(distances[0] < 6.0000000000000000){
             searces = true;
         }
 
