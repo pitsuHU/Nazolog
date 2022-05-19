@@ -325,12 +325,20 @@ function calcDistance(lat, lng) {
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
         distances[1] = distances[0] + 2; 
+
+        if(distance[i] < 50){
+            searces = true;
+        }
+
+
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
                     txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
                                     + "P1検知:" + searces;// データ表示
 
 
         // 捕獲の判定と捕獲した時のエフェクト
+
+
 
         /*
         if(distance[i] < 50 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
