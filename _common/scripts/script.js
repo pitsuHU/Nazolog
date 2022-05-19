@@ -324,7 +324,7 @@ function calcDistance(lat, lng) {
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
-                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
+                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1]-5 +  ",  ポイント3:" + distances[2] + "<br>" 
                                     + "P1検知:" + searces;// データ表示
 
 
