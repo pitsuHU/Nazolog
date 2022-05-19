@@ -324,11 +324,11 @@ function calcDistance(lat, lng) {
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
-        /*
+        
         if(distances[0] < 0.015){
             searces = true;
         }
-        */
+        
 
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
                     txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
