@@ -326,9 +326,11 @@ function calcDistance(lat, lng) {
 
         distances[1] = distances[0] + 2; 
 
-        if(distance[i] < 50){
-            searces = true;
-        }
+        //if(distance[i] < 50){
+        //    searces = true;
+        //}
+
+        searces = true;
 
 
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
