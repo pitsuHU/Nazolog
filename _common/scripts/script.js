@@ -23,8 +23,8 @@ var captured = [];
 var CheckPoints = [
     {
         "name": "1_ElmnoMori",
-        "lat":43.103944,
-        "lng":141.344545,
+        "lat":43.077149,
+        "lng":141.291062,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
         "sound":"_common/sounds/Check1.mp3",
