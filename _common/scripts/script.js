@@ -23,13 +23,32 @@ var captured = [];
 var CheckPoints = [
     {
         "name": "1_ElmnoMori",
-        "lat":43.104020,
-        "lng":141.344518,
+        "lat":43.100837,
+        "lng":141.343574,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
         "sound":"_common/sounds/Check1.mp3",
         "voice":"_common/sounds/1_elm_forest.mp3"
     },
+    {
+        "name": "1_ElmnoMori",
+        "lat":43.101478,
+        "lng":141.343342,
+        "pointer":"img/marker_p.png",
+        "img":"img/1_elm.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/1_elm_forest.mp3"
+    },
+    {
+        "name": "1_ElmnoMori",
+        "lat":43.102215,
+        "lng":141.343205,
+        "pointer":"img/marker_p.png",
+        "img":"img/1_elm.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/1_elm_forest.mp3"
+    },
+
     {
         "name": "1_ElmnoMori",
         "lat":43.071049,
