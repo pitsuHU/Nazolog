@@ -216,7 +216,38 @@ var CheckPoints = [
         "img":"img/13_enyu.png",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    {
+        "name": "Newdays",
+        "lat":35.760479,
+        "lng":139.721994,
+        "pointer":"img/marker_p.png",
+        "img":"img/1_elm.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/1_elm_forest.mp3"
+    },
+
+    {
+        "name": "Jujo_gate",
+        "lat":35.760010,
+        "lng":139.720920,
+        "pointer":"img/marker_p.png",
+        "img":"img/13_enyu.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/13_enyu.mp3"
+    },
+
+    {
+        "name": "Jujo_gate",
+        "lat":35.760654,
+        "lng":139.721412,
+        "pointer":"img/marker_p.png",
+        "img":"img/12_modelburn.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/12_modelbarn.mp3"
     }
+
 
 ];                                  // ★人魚の情報を入れる変数
 
@@ -337,23 +368,23 @@ function placeCheckPoints() {
 function calcDistance(lat, lng) {
     var distances = [];                 // 距離を入れる配列
     var searces = false;
-    var test
 
     for(var i = 0; i < CheckPoints.length; i++) {      // 全ての人魚について
         //var pos = new google.maps.LatLng(CheckPoints[i].lat, CheckPoints[i].lng);                 // 人魚の位置を設定
         distances[i] = distance(lat, lng, CheckPoints[i].lat, CheckPoints[i].lng); //チェックポイントとの距離を測る
 
-        
+        /*
         if(distances[0] < 0.015){
             searces = true;
         }
-        
+        */
 
+        /*
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
                     txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
                                     + "P1検知:" + searces;// データ表示
 
-
+        */
         // 捕獲の判定と捕獲した時のエフェクト
 
         
