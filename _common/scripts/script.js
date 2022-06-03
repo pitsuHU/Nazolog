@@ -379,19 +379,19 @@ function calcDistance(lat, lng) {
         }
         */
 
-        /*
+        
         var txt = document.getElementById("txt");       // データを表示するdiv要素の取得
-                    txt.innerHTML = "ポイント1: " + distances[0] + ",  ポイント2:" + distances[1] +  ",  ポイント3:" + distances[2] + "<br>" 
+                    txt.innerHTML = "ポイント1: " + captured[0] + ",  ポイント2:" + captured[1] +  ",  ポイント3:" + captured[2] + "<br>" 
                                     + "P1検知:" + searces;// データ表示
 
-        */
+        
         // 捕獲の判定と捕獲した時のエフェクト
 
         
-        if(distances[i] < 0.15 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distances[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             searces = true;
-            var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
-            music.play();                                       // 音を流す            
+            //var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
+            //music.play();                                       // 音を流す            
             captured[i] = true;                                 // 捕獲済にする
             get.hidden = false;                                 // img要素を表示
             mainDiv.hidden = true;                              // 地図を非表示
