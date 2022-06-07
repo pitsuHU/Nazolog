@@ -23,8 +23,8 @@ var captured = [];
 var CheckPoints = [
     {
         "name": "1_ElmnoMori",
-        "lat":43.100837,
-        "lng":141.343574,
+        "lat":43.077792,
+        "lng":141.290940,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
         "sound":"_common/sounds/Check1.mp3",
@@ -32,17 +32,17 @@ var CheckPoints = [
     },
     {
         "name": "1_ElmnoMori",
-        "lat":43.101478,
-        "lng":141.343342,
+        "lat":43.077514,
+        "lng":141.291444,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
-        "sound":"_common/sounds/Check1.mp3",
-        "voice":"_common/sounds/1_elm_forest.mp3"
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/2_elm.mp3"
     },
     {
         "name": "1_ElmnoMori",
-        "lat":43.102215,
-        "lng":141.343205,
+        "lat":43.076732,
+        "lng":141.292735,
         "pointer":"img/marker_p.png",
         "img":"img/1_elm.png",
         "sound":"_common/sounds/Check1.mp3",
@@ -217,7 +217,7 @@ var CheckPoints = [
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
-
+    //十条
     {
         "name": "Newdays",
         "lat":35.760479,
