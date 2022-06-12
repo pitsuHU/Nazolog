@@ -173,7 +173,7 @@ var CheckPoints = [
         "lat":43.060419,
         "lng":141.351356,
         "pointer":"img/marker_p.png",
-        "img":"img/12_modelburn.png",
+        "img":"img/odori_5_waterfountain.jpg",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/12_modelbarn.mp3"
     },
@@ -183,7 +183,7 @@ var CheckPoints = [
         "lat":43.060209,
         "lng":141.349810,
         "pointer":"img/marker_p.png",
-        "img":"img/13_enyu.png",
+        "img":"img/odori_4_syoon.jpg",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
@@ -193,7 +193,7 @@ var CheckPoints = [
         "lat":43.059443,
         "lng":141.344441,
         "pointer":"img/marker_p.png",
-        "img":"img/13_enyu.png",
+        "img":"img/odori_3_blackslide.jpg",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
@@ -203,7 +203,7 @@ var CheckPoints = [
         "lat":43.058556,
         "lng":141.337669,
         "pointer":"img/marker_p.png",
-        "img":"img/13_enyu.png",
+        "img":"img/odori_1_court.jpg",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
@@ -213,7 +213,7 @@ var CheckPoints = [
         "lat":43.058692,
         "lng":141.338814,
         "pointer":"img/marker_p.png",
-        "img":"img/13_enyu.png",
+        "img":"img/odori_2_garden.jpg",
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/13_enyu.mp3"
     },
