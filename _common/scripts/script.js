@@ -175,7 +175,7 @@ var CheckPoints = [
         "pointer":"img/marker_p.png",
         "img":"img/odori_5_waterfountain.jpg",
         "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/12_modelbarn.mp3"
+        "voice":"_common/sounds/odori_5_waterfountain.mp3"
     },
 
     {
@@ -185,7 +185,7 @@ var CheckPoints = [
         "pointer":"img/marker_p.png",
         "img":"img/odori_4_syoon.jpg",
         "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/13_enyu.mp3"
+        "voice":"_common/sounds/odori_4_syoon.mp3"
     },
 
     {
@@ -195,7 +195,7 @@ var CheckPoints = [
         "pointer":"img/marker_p.png",
         "img":"img/odori_3_blackslide.jpg",
         "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/13_enyu.mp3"
+        "voice":"_common/sounds/odori_3_blackslide.mp3"
     },
 
     {
@@ -205,7 +205,7 @@ var CheckPoints = [
         "pointer":"img/marker_p.png",
         "img":"img/odori_1_court.jpg",
         "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/13_enyu.mp3"
+        "voice":"_common/sounds/odori_1_court.mp3"
     },
 
     {
@@ -215,7 +215,7 @@ var CheckPoints = [
         "pointer":"img/marker_p.png",
         "img":"img/odori_2_garden.jpg",
         "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/13_enyu.mp3"
+        "voice":"_common/sounds/odori_2_garden.mp3"
     },
     //十条
     {
