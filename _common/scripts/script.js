@@ -488,3 +488,4 @@ function changeProgressBar() {
 }
 
 progressBar.addEventListener("click", changeProgressBar);
+
