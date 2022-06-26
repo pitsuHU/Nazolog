@@ -78,25 +78,26 @@
         >
         
             <a-text
-            value="This content will always face you."
-            look-at="[gps-camera]"
-            scale="50 50 50"
-            gps-entity-place="latitude: 43.078061; longitude: 141.290642;"
-          ></a-text>
+                value="This content will always face you."
+                look-at="[gps-camera]"
+                scale="50 50 50"
+                gps-entity-place="latitude: 43.078061; longitude: 141.290642;"
+            >
+            </a-text>
+            <!--
+            <a-entity
+                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+                look-at="[gps-camera]"
+                scale="5 5 5"
+                gps-entity-place="latitude: 43.100926; longitude: 141.340321;"
+            >
+            </a-entity>
+            -->
+            <a-camera gps-camera rotation-reader> </a-camera>
+        </a-scene>
     </section>
     
          
-    <!--
-      <a-entity
-      gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-      look-at="[gps-camera]"
-      scale="5 5 5"
-      gps-entity-place="latitude: 43.100926; longitude: 141.340321;"
-    >
-    </a-entity>
-  -->
-      <a-camera gps-camera rotation-reader> </a-camera>
-    </a-scene>
     
 
      <!-- チェックポイントに達したら現れる音声プレーヤー -->
