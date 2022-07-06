@@ -273,16 +273,7 @@ L.tileLayer(
 placeCheckPoints();
 
 //自分のマーカの作成
-// const marker = L.marker(defPos).addTo(map)
-
-// テスト
-var pulsingIcon2 = L.icon.pulse({
-    iconSize:[20,20]
-   ,color:'#57c6fd'
-   ,fillColor:'#57c6fd'
-   ,heartbeat: 2
-});
-var marker = L.marker([43.081212,141.351356], {icon:pulsingIcon2}).addTo(map).bindPopup("heartbeat:2sec");
+const marker = L.marker(defPos).addTo(map)
 
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
 

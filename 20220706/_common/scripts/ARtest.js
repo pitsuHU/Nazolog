@@ -1,0 +1,2 @@
+
+ARscene.hidden = true;
