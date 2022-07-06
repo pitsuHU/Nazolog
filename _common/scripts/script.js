@@ -286,29 +286,29 @@ var marker = L.marker([43.081212,141.351356], {icon:pulsingIcon2}).addTo(map).bi
 
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
 
-navigator.geolocation.watchPosition((position) =>{
+// navigator.geolocation.watchPosition((position) =>{
 
-    //緯度経度の情報を得る
-    const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
-    //const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
-    const zoom = map.getZoom();
+//     //緯度経度の情報を得る
+//     const lat = position.coords.latitude;
+//     const lng = position.coords.longitude;
+//     //const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
+//     const zoom = map.getZoom();
 
 
-    //マップの表示位置を変更
-    map.setView([lat, lng], zoom, {animation: true});
-    //マーカの位置も変更
-    marker.setLatLng([lat, lng]);
-    marker.bindPopup('現在位置はココ');
+//     //マップの表示位置を変更
+//     map.setView([lat, lng], zoom, {animation: true});
+//     //マーカの位置も変更
+//     marker.setLatLng([lat, lng]);
+//     marker.bindPopup('現在位置はココ');
 
-    calcDistance(lat, lng)  //各チェックポイントとの距離を測る
+//     calcDistance(lat, lng)  //各チェックポイントとの距離を測る
 
-},(error)=>{
+// },(error)=>{
 
-},{
-    enableHighAccuracy: true
-}
-);
+// },{
+//     enableHighAccuracy: true
+// }
+// );
 
 
 
