@@ -1,32 +1,5 @@
 
 var CheckPoints = [
-    {
-        "name": "1_ElmnoMori",
-        "lat":43.077792,
-        "lng":141.290940,
-        "pointer":"img/marker_p.png",
-        "img":"img/1_elm.png",
-        "sound":"_common/sounds/Check1.mp3",
-        "voice":"_common/sounds/1_elm_forest.mp3"
-    },
-    {
-        "name": "1_ElmnoMori",
-        "lat":43.077514,
-        "lng":141.291444,
-        "pointer":"img/marker_p.png",
-        "img":"img/1_elm.png",
-        "sound":"_common/sounds/Check3.mp3",
-        "voice":"_common/sounds/2_elm.mp3"
-    },
-    {
-        "name": "1_ElmnoMori",
-        "lat":43.076732,
-        "lng":141.292735,
-        "pointer":"img/marker_p.png",
-        "img":"img/1_elm.png",
-        "sound":"_common/sounds/Check1.mp3",
-        "voice":"_common/sounds/1_elm_forest.mp3"
-    },
 
     {
         "name": "1_ElmnoMori",
