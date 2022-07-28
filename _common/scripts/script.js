@@ -262,40 +262,40 @@ placeCheckPoints();
 //自分のマーカの作成
 // const marker = L.marker(defPos).addTo(map)
 
-// テスト
+// 自分のマーカの作成
 var pulsingIcon2 = L.icon.pulse({
     iconSize:[20,20]
    ,color:'#57c6fd'
    ,fillColor:'#57c6fd'
    ,heartbeat: 2
 });
-var marker = L.marker([43.081212,141.351356], {icon:pulsingIcon2}).addTo(map).bindPopup("heartbeat:2sec");
+var marker = L.marker(defpos, {icon:pulsingIcon2}).addTo(map).bindPopup("heartbeat:2sec");
 
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
 
-// navigator.geolocation.watchPosition((position) =>{
+navigator.geolocation.watchPosition((position) =>{
 
-//     //緯度経度の情報を得る
-//     const lat = position.coords.latitude;
-//     const lng = position.coords.longitude;
-//     //const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
-//     const zoom = map.getZoom();
+    //緯度経度の情報を得る
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    //const accu = position.coords.accuracy;            // 緯度・経度の精度を取得
+    const zoom = map.getZoom();
 
 
-//     //マップの表示位置を変更
-//     map.setView([lat, lng], zoom, {animation: true});
-//     //マーカの位置も変更
-//     marker.setLatLng([lat, lng]);
-//     marker.bindPopup('現在位置はココ');
+    //マップの表示位置を変更
+    map.setView([lat, lng], zoom, {animation: true});
+    //マーカの位置も変更
+    marker.setLatLng([lat, lng]);
+    marker.bindPopup('現在位置はココ');
 
-//     calcDistance(lat, lng)  //各チェックポイントとの距離を測る
+    calcDistance(lat, lng)  //各チェックポイントとの距離を測る
 
-// },(error)=>{
+},(error)=>{
 
-// },{
-//     enableHighAccuracy: true
-// }
-// );
+},{
+    enableHighAccuracy: true
+}
+);
 
 
 
@@ -384,8 +384,7 @@ function calcDistance(lat, lng) {
         // 捕獲の判定と捕獲した時のエフェクト
 
         
-        if(distances[i] < 10000 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
-        // if(distances[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        if(distances[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             searces = true;
             //var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             //music.play();                                       // 音を流す            

@@ -293,6 +293,5 @@ function portfoliomodal(){
         div1.childNodes[0] = div2;
         $('#PortfolioModalList').append(div1);
     }
-    console.log("test");
 }
 portfoliomodal();
