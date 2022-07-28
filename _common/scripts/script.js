@@ -367,7 +367,6 @@ function calcDistance(lat, lng) {
             mainDiv.hidden = true;                              // 地図を非表示
             portfolioDiv.hidden = true;                         // ポートフォリオを非表示
             footerDiv.hidden = true;                        // footerを非表示
-            // ARDiv.hidden = true;                            // ARを非表示
             initPlayer(CheckPoints[i]);
             closeButton.addEventListener("click", () => {            // img要素がクリックされたら
                 track.pause();
@@ -375,7 +374,6 @@ function calcDistance(lat, lng) {
                 mainDiv.hidden = false;                          // 地図を表示
                 portfolioDiv.hidden = false;                    //  ポートフォリオを表示
                 footerDiv.hidden = false;                        // footerを表示
-                // ARDiv.hidden = false;                            // ARを表示
             });
         }
 
