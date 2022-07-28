@@ -383,8 +383,9 @@ function calcDistance(lat, lng) {
         
         // 捕獲の判定と捕獲した時のエフェクト
 
+        if(distances[i] < 10000 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
         
-        if(distances[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
+        // if(distances[i] < 0.015 && captured[i] === false) {         // 距離が20m未満、かつ、まだ捕獲していないなら
             searces = true;
             //var music = new Audio(CheckPoints[i].sound);　　　　　　 // music変数をさくせい
             //music.play();                                       // 音を流す            
