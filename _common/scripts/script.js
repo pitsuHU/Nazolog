@@ -366,7 +366,7 @@ function calcDistance(lat, lng) {
             get.hidden = false;                                 // img要素を表示
             mainDiv.hidden = true;                              // 地図を非表示
             portfolioDiv.hidden = true;                         // ポートフォリオを非表示
-            footerDiv.hidden = false;                        // footerを非表示
+            footerDiv.hidden = true;                        // footerを非表示
             initPlayer(CheckPoints[i]);
             closeButton.addEventListener("click", () => {            // img要素がクリックされたら
                 track.pause();
