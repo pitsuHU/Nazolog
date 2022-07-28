@@ -224,43 +224,89 @@ function portfolio(){
         img1.alt = "...";
         div2.appendChild(img1);
         div1.appendChild(div2);
+        console.log(div1);
         $('#PortfolioList').append(div1);
     }
 }
 portfolio();
 
-function portfoliomodal(){
-    for(var i=0; i<CheckPoints.length; i++){    
-        var origin_div1 = document.getElementById('portfolioModalOrigin');
-        var div1 = document.createElement('div');
-        div1 = origin_div1.cloneNode(true);
-        $(div1).attr('id','portfolioModal'+String(i+1));
-        $(div1).attr('aria-labelledby','portfolioModal'+String(i+1));
-        var div2 = div1.children.item(0);
-        var div3 = div2.children.item(0);
-        var div4 = div3.children.item(1);
-        var div5 = div4.children.item(0);
-        var div6 = div5.children.item(0);
-        var div7 = div6.children.item(0);
-        var h2 = div7.children.item(0);
-        h2.innerHTML = CheckPoints[i].name;
-        div7.childNodes[0] = h2;
-        var img = div7.children.item(2);
-        img.src = CheckPoints[i].img;
-        div7.childNodes[2] = img;
-        var p = div7.children.item(3);
-        p.innerHTML = CheckPoints[i].name;
-        var audio = div7.children.item(4);
-        audio.src = CheckPoints[i].voice;
-        div7.childNodes[4] = audio;
-        div6.childNodes[0] = div7;
-        div5.childNodes[0] = div6;
-        div4.childNodes[0] = div5;
-        div3.childNodes[1] = div4;
-        div2.childNodes[0] = div3;
-        div1.childNodes[0] = div2;
-        $('#PortfolioModalList').append(div1);
-    }
-    console.log("test");
+// var audio1 = document.createElement('audio');
+// audio1.innerHTML = "Your browser does not support the <code>audio</code> element."
+// audio1.controls = true;
+// // $(audio1).attr(controls);
+// $(audio1).attr('src',CheckPoints[0].voice);
+// var p1 = document.createElement('p');
+// p1.innerHTML = "北大の入口にあるおみやげ屋さん。";
+
+// var img1 = document.createElement('img');
+
+// var div12 = document.createElement('Div');
+// var div11 = document.createElement('Div');
+// var div10 = document.createElement('Div');
+// var div9 = document.createElement('Div');
+// var h2 = document.createElement('h2');
+// var div8 = document.createElement('Div');
+// var div7 = document.createElement('Div');
+// var div6 = document.createElement('Div');
+// var div5 = document.createElement('Div');
+// var div4 = document.createElement('Div');
+// var div3 = document.createElement('Div');
+// var div2 = document.createElement('Div');
+// var div1 = document.createElement('Div');
+console.log(document.getElementById('PortfolioModalList').innerHTML);
+for(var i=0; i<CheckPoints.length; i++){
+
+    var origin_div1 = document.getElementById('portfolioModalOrigin');
+    var div1 = document.createElement('div');
+    div1 = origin_div1.cloneNode(true);
+    // $('#PortfolioModalList').append(div1);
+    $(div1).attr('id','portfolioModal'+String(i+1));
+    $(div1).attr('aria-labelledby','portfolioModal'+String(i+1));
+    var div2 = div1.children.item(0);
+    var div3 = div2.children.item(0);
+    var div4 = div3.children.item(1);
+    var div5 = div4.children.item(0);
+    var div6 = div5.children.item(0);
+    var div7 = div6.children.item(0);
+    var h2 = div7.children.item(0);
+    h2.innerHTML = CheckPoints[i].name;
+    div7.childNodes[0] = h2;
+    var img = div7.children.item(2);
+    img.src = CheckPoints[i].img;
+    div7.childNodes[2] = img;
+    var p = div7.children.item(3);
+    p.innerHTML = CheckPoints[i].name;
+    var audio = div7.children.item(4);
+    audio.src = CheckPoints[i].voice;
+    div7.childNodes[4] = audio;
+    div6.childNodes[0] = div7;
+    div5.childNodes[0] = div6;
+    div4.childNodes[0] = div5;
+    div3.childNodes[1] = div4;
+    div2.childNodes[0] = div3;
+    div1.childNodes[0] = div2;
+    $('#PortfolioModalList').append(div1);
 }
-portfoliomodal();
+console.log("test");
+console.log(document.getElementById('PortfolioModalList').innerHTML);
+
+// var div3 = div2.children[0];
+// var div4 = div3.children[1];
+// var div5 = div4.children[0];
+// var div6 = div5.children[0];
+// var div7 = div6.children[0];
+// var h2 = div7.children[0];
+// h2.innerHTML = "えるむ";
+// var img1 = div7.children[2];
+// $(img1).attr('src',CheckPoints[0].img);
+// var p1 = div7.children[3];
+// p1.innerHTML = "おみやげ〜";
+// var audio1 = div7.children[4];
+// $(audio1).attr('src',Checkpoints[0].voice);
+// div6.children[0] = div7;
+// div5.children[0] = div6;
+// div4.children[0] = div5;
+// div3.children[1] = div4;
+// div2.children[0] = div3;
+// origin_div1.children[0] = div2;
+// console.log(origin_div1);

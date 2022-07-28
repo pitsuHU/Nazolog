@@ -10,6 +10,25 @@ var CheckPoints = [
         "voice":"_common/sounds/2_elm.mp3"
     },
     {
+        "name": "1_ElmnoMori",
+        "lat":43.076732,
+        "lng":141.292735,
+        "pointer":"img/marker_p.png",
+        "img":"img/1_elm.png",
+        "sound":"_common/sounds/Check1.mp3",
+        "voice":"_common/sounds/1_elm_forest.mp3"
+    },
+
+    {
+        "name": "1_ElmnoMori",
+        "lat":43.071049,
+        "lng":141.347466,
+        "pointer":"img/marker_p.png",
+        "img":"img/1_elm.png",
+        "sound":"_common/sounds/Check3.mp3",
+        "voice":"_common/sounds/1_elm_forest.mp3"
+    },
+    {
         "name": "2_Elm",
         "lat":43.071211,
         "lng":141.347070,
@@ -118,6 +137,7 @@ var CheckPoints = [
         "voice":"_common/sounds/13_enyu.mp3"
     },
 
+    //ここから大通公園用
     {
         "name": "waterfountain",
         "lat":43.060419,
@@ -157,6 +177,7 @@ var CheckPoints = [
         "sound":"_common/sounds/Check3.mp3",
         "voice":"_common/sounds/odori_1_court.mp3"
     },
+
     {
         "name": "garden",
         "lat":43.058692,
@@ -198,17 +219,15 @@ var CheckPoints = [
     }
 ];
 
-function portfolio(){
-    for(var i=0; i<CheckPoints.length; i++){
+function f(){
+    {
+
         var div1 = document.createElement('Div');
         div1.className = 'col-md-6 col-lg-4 mb-5';
         var div2 = document.createElement('Div');
         div2.className = 'portfolio-item mx-auto';
-        // div2.dataset.bs.toggle = "modal";
-        // div2.dataset.target = "#portfolioModal1";
-        $(div2).attr('data-bs-toggle','modal');
-        var databstarget = '#portfolioModal' + String(i+1);
-        $(div2).attr('data-bs-target',databstarget);
+        div2.dataset.bs.toggle = "modal";
+        div2.dataset.target = "#portfolioModal1";
         var div3 = document.createElement('Div');
         div3.className = 'portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100';
         var div4 = document.createElement('Div');
@@ -220,47 +239,37 @@ function portfolio(){
         div2.appendChild(div3);
         var img1 = document.createElement('img');
         img1.className = 'img-fluid';
-        img1.src = CheckPoints[i].img;
+        img1.src = CheckPoints[0].img;
         img1.alt = "...";
         div2.appendChild(img1);
         div1.appendChild(div2);
-        $('#PortfolioList').append(div1);
+        document.getElementById('AddVoicePlayer').appendChild(div1);
+        console.log(document.getElementById('AddVoicePlayer'));
     }
-}
-portfolio();
+    document.getElementById('AddVoicePlayer');
+    // console.log(document.getElementById('AddVoicePlayer'));
+    // var div1 = document.getElementById("AddVoicePlayer");
 
-function portfoliomodal(){
-    for(var i=0; i<CheckPoints.length; i++){    
-        var origin_div1 = document.getElementById('portfolioModalOrigin');
-        var div1 = document.createElement('div');
-        div1 = origin_div1.cloneNode(true);
-        $(div1).attr('id','portfolioModal'+String(i+1));
-        $(div1).attr('aria-labelledby','portfolioModal'+String(i+1));
-        var div2 = div1.children.item(0);
-        var div3 = div2.children.item(0);
-        var div4 = div3.children.item(1);
-        var div5 = div4.children.item(0);
-        var div6 = div5.children.item(0);
-        var div7 = div6.children.item(0);
-        var h2 = div7.children.item(0);
-        h2.innerHTML = CheckPoints[i].name;
-        div7.childNodes[0] = h2;
-        var img = div7.children.item(2);
-        img.src = CheckPoints[i].img;
-        div7.childNodes[2] = img;
-        var p = div7.children.item(3);
-        p.innerHTML = CheckPoints[i].name;
-        var audio = div7.children.item(4);
-        audio.src = CheckPoints[i].voice;
-        div7.childNodes[4] = audio;
-        div6.childNodes[0] = div7;
-        div5.childNodes[0] = div6;
-        div4.childNodes[0] = div5;
-        div3.childNodes[1] = div4;
-        div2.childNodes[0] = div3;
-        div1.childNodes[0] = div2;
-        $('#PortfolioModalList').append(div1);
-    }
-    console.log("test");
-}
-portfoliomodal();
+    // // div1.insertAdjacentHTML('beforeend','<h1 style="color:blue;">test</h1>');
+    // div1.insertAdjacentHTML('beforeend','<div class="col-md-6 col-lg-4 mb-5">');
+    // div1.insertAdjacentHTML('beforeend','<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal' + 1 + '" ');
+    //     div1.insertAdjacentHTML('beforeend','<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" ');
+    //         div1.insertAdjacentHTML('beforeend','<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>');
+    //     div1.insertAdjacentHTML('beforeend','</div>');
+    //     div1.insertAdjacentHTML('beforeend','<img class="img-fluid" src="'+CheckPoints[0].img+'" alt="..."');
+    // div1.insertAdjacentHTML('beforeend','</div>');
+    // div1.insertAdjacentHTML('beforeend','</div>');
+    // div1.innerHTML = '';
+    // for(var i=0; i<CheckPoints.length; i++){
+    //     div1.innerHTML += '<div class="col-md-6 col-lg-4 mb-5">';
+    //         div1.innerHTML += '<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal' + i+1 + '">';
+    //             div1.innerHTML += '<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">';
+    //                 div1.innerHTML += '<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>';
+    //             div1.innerHTML += '</div>';
+    //             div1.innerHTML += '<img class="img-fluid" src="'+CheckPoints[i].img+'" alt="..." />';
+    //         div1.innerHTML += '</div>';
+    //     div1.innerHMLT += '</div>';
+    // }
+                        
+};
+f();
