@@ -269,7 +269,7 @@ var pulsingIcon2 = L.icon.pulse({
    ,fillColor:'#57c6fd'
    ,heartbeat: 2
 });
-var marker = L.marker(defpos, {icon:pulsingIcon2}).addTo(map).bindPopup("heartbeat:2sec");
+var marker = L.marker(defPos, {icon:pulsingIcon2}).addTo(map).bindPopup("heartbeat:2sec");
 
 // GPS センサの値が変化したら何らか実行する geolocation.watchPosition メソッド
 
